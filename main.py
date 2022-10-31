@@ -39,7 +39,7 @@ with pd.ExcelWriter(buffer, engine='xlsxwriter') as writer:
 
     st.download_button(
             label="Download SAT results",
-            data=temp,
+            data=buffer,
             file_name="sat_results "+ dt.datetime.now().strftime("%Y-%m-%d") +".xlsx",
             mime="application/vnd.ms-excel"
             )
